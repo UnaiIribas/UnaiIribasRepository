@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularioa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .menu {
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ccc;
+        }
+        .genero label {
+            display: inline;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="ProyektuaPersonalitzatzaile.html">Pertsonalizatzailea</a>
+        <a href="ProyektuaFromularioa.html">Formularioa</a>
+        <a href="ProyektuaIrudiak.html">Irudiak</a>
+        <a href="ProyektuaModua.html">Modua</a>
+    </div>
+    <div class="container">
+        <label for="izen">Izen osoa:</label>
+        <input type="text" id="izen" placeholder="Sartazu zure izen osoa">
+
+        <label for="email">Emaila:</label>
+        <input type="email" id="email" placeholder="Sartazu zure posta elektronikoa">
+        
+        <button>Onartu</button>
+
+        <label>Generoa:</label>
+        <div class="radio-group">
+            <input type="radio" id="gizonezkoa" name="generoa">
+            <label for="gizonezkoa">Gizonezkoa</label>
+            <input type="radio" id="emakumezkoa" name="generoa">
+            <label for="emakumezkoa">Emakumezkoa</label>
+            <input type="radio" id="beste" name="generoa">
+            <label for="beste">Beste bat</label>
+        </div>
+
+        <label for="estatua">Estatua:</label>
+        <select id="estatua">
+            <option>Aukeratu zure herrialdea</option>
+        </select>
+        
+        <button>Bidali</button>
+    </div>
+</body>
+</html>
