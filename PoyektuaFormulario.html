@@ -87,9 +87,9 @@
         <input type="text" id="izen" placeholder="Sartazu zure izen osoa">
 
         <label for="email">Emaila:</label>
-        <input type="email" id="email" placeholder="Sartazu zure posta elektronikoa">
-        
-        <button>Onartu</button>
+        <input type="email" id="email" placeholder="Sartazu zure posta elektronikoa" class="error">
+        <button type="button" onclick="email()">Konprobaketa</button>
+        <p id="emailMezua"></p>
 
         <div class="form-errenkada">
             <label>Generoa:</label>
@@ -103,7 +103,7 @@
               <input type="radio" id="besteak" name="generoa" value="besteak">
               <label for="besteak">Bestea bat</label>
             </div>
-          </div>
+        </div>
     
           <div class="form-errenkada">
             <label for="herrialdea">Estatua</label>
@@ -115,7 +115,24 @@
             </select>
           </div>        
         <button>Bidali</button>
-    </div>
+        </div>
+        <script>
+            function email() {
+                const emailField = document.getElementById('email');
+                const emailMessage = document.getElementById('emailMezua')
+                const email = emailField.value;
+            
+            if (email.incuides('@')){
+                email.emailMessage.textcontent = `"${email}" erabilgarri da.`;
+                emailMessage.className = 'succes';
+                emailMessage.stylecolor = 'green';
+            }else {
+                email.emailMessage.textcontent = `"${email}" ez da erabilgarri.`;
+                emailMessage.className = 'error';
+                emailMessage.stylecolor = 'red';
+            }
+        }
+        </script>
 </head>
 </body>
 </html>
