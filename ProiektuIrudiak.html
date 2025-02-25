@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertsonalizatzailea</title>
+    <link rel="stylesheet" href="irudiak.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="ProiektuPertsonalizatzailea.html">Pertsonalizatzea</a></li>
+          <li><a href="PoyektuaFormulario.html">formularioa</a></li>
+          <li><a href="ProiektuIrudiak.html">Irudiak</a></li>
+        </ul>
+      </nav>
+      <button onclick="aldaketa()">Aldatu argazkia!</button>
+      <div>
+        <img id="argazki" src=" " alt="Imagen" style="width:300px;height:200px;">
+      </div>
+      <div>
+        <img id="automatiko" src="JavaScript.png" alt="Imagen" style="width:300px;height:200px;">
+      </div>
+
+      <script>
+        const images = ["CSS.png", "HTML.png", "JavaScript.png"];
+        let currentIndex = 0;
+
+        function aldaketa() {
+          currentIndex = (currentIndex + 1) % images.length;
+          document.getElementById("argazki").src = images[currentIndex];
+        }
+
+        function automatiko() {
+          currentIndex = (currentIndex + 1) % images.length;
+          document.getElementById("automatiko").src = images[currentIndex];
+        }
+
+        setInterval(automatiko, 1000);
+      </script>
+</body>
+</html>
