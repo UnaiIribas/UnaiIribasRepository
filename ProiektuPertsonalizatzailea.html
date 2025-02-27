@@ -65,12 +65,17 @@
         </style>
 </head>
 <body>
+    <div id="esaldiak">
+        <h1>Ongi etorri pertsonalizatzaileara </h1>
+        <h4>Paragrafo honen estiloa alda dezakezua</h4>
+        <h4>Click egin pertsonalizatzeko</h4>
+    </div>
     <nav>
         <ul>
             <li class="kontainerra">
                 <a href="personalizazioa">Pertsonalizatzailea</a>
-                <div class="dropdown">
-                    <div class="color-text"> Atzeko Kolorea </div>
+                <div class="pertsonalizatu">
+                    <div class="color-options"> Atzeko Kolorea </div>
                     <button class="color-option" style="background: pink;" onclick="fondoa('pink')"></button> 
                     <button class="color-option" style="background: PaleTurquoise;" onclick="fondoa('paleTurquoise')"></button>
                     <button class="color-option" style="background: grey;" onclick="fondoa('grey')"></button>
@@ -84,11 +89,12 @@
                     <div class="color-option" style="background: blue;" onclick="letrakkolorea('blue')"></div>
                     <div class="color-option" style="background: black;" onclick="letrakkolorea('black')"></div>
                     <div class="color-option" style="background: white;" onclick="letrakkolorea('white')"></div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('arial')">XS</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('times')">S</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('courier new')">A</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('fantasy')">C</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('monospace')">T</div>
+                    
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina1('arial')">XS</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina2('times')">S</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina3('courier new')">A</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina4('fantasy')">C</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina5('monospace')">T</div>
                 </div>
             
             </li>
@@ -97,63 +103,31 @@
         </ul>
     </nav>
    
-    <div id="esaldiak">
-        <h1>Ongi etorri pertsonalizatzaileara </h1>
-        <h4>Paragrafo honen estiloa alda dezakezua</h4>
-        <h4>Click egin pertsonalizatzeko</h4>
-    </div>
+    
    
     <script>
-        function function1(color) {
-            switch(color) {
-                case 'pink':
-                    document.body.style.backgroundColor = "pink";
-                    break;
-                case 'paleGreen':
-                    document.body.style.backgroundColor = "paleGreen";
-                    break;
-                case 'paleTurquoise':
-                    document.body.style.backgroundColor = "paleTurquoise";
-                    break;
-                case 'grey':
-                    document.body.style.backgroundColor = "grey";
-                    break;
-                case 'gainsboro':
-                    document.body.style.backgroundColor = "gainsboro";
-                    break;
-                
-                case'red':
-                    document.getElementById("esaldiak").style.color = "red";
-                    break;
-                case'blue':
-                    document.getElementById("esaldiak").style.color = "blue";
-                    break;
-                case'green':
-                    document.getElementById("esaldiak").style.color = "green";
-                    break;
-                case'black':
-                    document.getElementById("esaldiak").style.color = "black";
-                    break;
-                case'white':
-                    document.getElementById("esaldiak").style.color = "white";
-                    break;
-
-                case 'arial':
-                    document.getElementById("esaldiak").style.fontSize = "arial"
-                    break;
-                case 'times':
-                    document.getElementById("esaldiak").style.fontSize = "medium"
-                    break;
-                case 'courier new':
-                    document.getElementById("esaldiak").style.fontSize = "courier new"
-                    break;
-                case 'fantasy':
-                    document.getElementById("esaldiak").style.fontFamily = "fantasy"
-                    break;
-                case 'monospace':
-                    document.getElementById("esaldiak").style.fontFamily = "monospace"
-                    break;
-                }
+        function fondoa(color) {
+            document.body.style.backgroundColor = color;
+        }    
+        function letraktamaina1() {
+            document.getElementsByTagName("h1")[0].style.fontSize = "12px";
+            document.getElementsByTagName("p")[0].style.fontSize = "12px";
+        }
+        function letraktamaina2() {
+            document.getElementsByTagName("h1")[0].style.fontSize = "14px";
+            document.getElementsByTagName("p")[0].style.fontSize = "14px";
+        }
+        function letraktamaina3() {
+            document.getElementsByTagName("h1")[0].style.fontSize = "20px";
+            document.getElementsByTagName("p")[0].style.fontSize = "20x";
+        }
+        function letraktamaina4() {
+            document.getElementsByTagName("h1")[0].style.fontSize = "24px";
+            document.getElementsByTagName("p")[0].style.fontSize = "24px";
+        }
+        function letraktamaina5() {
+            document.getElementsByTagName("h1")[0].style.fontSize = "28px";
+            document.getElementsByTagName("p")[0].style.fontSize = "28px";
         }
     </script>
    
