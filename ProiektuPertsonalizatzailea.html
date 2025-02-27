@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Proiektua/styles_proiektua/persolnalizer.css">
     <title>Document</title>
+    <style>
+        body {
+            background-color: #e57373; /* Color de fondo rosa */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+         }
+        
+        
+        
+        .iruadiak {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        
+        .fromularioa {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        
+        .kontainerra {
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .options-box {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .color-option, .text-option {
+            width: 25px;
+            height: 25px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        
+        .color-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        </style>
 </head>
 <body>
     <nav>
@@ -14,10 +72,11 @@
                 <div class="dropdown">
                     <div class="color-text"> Atzeko Kolorea </div>
                     <button class="color-option" style="background: pink;" onclick="fondoa('pink')"></button> 
-                    <button class="color-option" style="background: grey;" onclick="fondoa('grey')"></button>
-                    <button class="color-option" style="background: rgb(148, 148, 147);" onclick="fondoa('rgb(148, 148, 147)')"></button>
-                    <button class="color-option" style="background: PaleGreen;" onclick="fondoa('paleGreen')"></button>
                     <button class="color-option" style="background: PaleTurquoise;" onclick="fondoa('paleTurquoise')"></button>
+                    <button class="color-option" style="background: grey;" onclick="fondoa('grey')"></button>
+                    <button class="color-option" style="background: PaleGreen;" onclick="fondoa('paleGreen')"></button>
+                    <button class="color-option" style="background: gainsboro;" onclick="fondoa('gainsboro')"></button>
+                    
                     
                     <div class="color-text"> Aldatu Letrak </div>
                     <div class="color-option" style="background: red;" onclick="letrakkolorea('black')"></div>
@@ -25,16 +84,16 @@
                     <div class="color-option" style="background: blue;" onclick="letrakkolorea('blue')"></div>
                     <div class="color-option" style="background: black;" onclick="letrakkolorea('black')"></div>
                     <div class="color-option" style="background: white;" onclick="letrakkolorea('white')"></div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('small')">XS</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('medium')">S</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('arial')">A</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('courier')">C</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('times')">T</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('arial')">XS</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('times')">S</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('courier new')">A</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('fantasy')">C</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina('monospace')">T</div>
                 </div>
             
             </li>
-            <li><a href="PoiektuaFormulario.html">Form</a></li>
-            <li><a href="ProiektuIrudiak.html">Images</a></li>
+            <li class="fromularioa"><a href="PoiektuaFormulario.html">Formularioa</a></li>
+            <li class="irudiak"><a href="ProiektuIrudiak.html">Irudia</a></li>
         </ul>
     </nav>
    
@@ -44,4 +103,57 @@
         <h4>Click egin pertsonalizatzeko</h4>
     </div>
    
+    <script>
+        function function1(color) {
+            switch(color) {
+                case 'pink':
+                    document.body.style.backgroundColor = "pink";
+                    break;
+                case 'paleGreen':
+                    document.body.style.backgroundColor = "paleGreen";
+                    break;
+                case 'paleTurquoise':
+                    document.body.style.backgroundColor = "paleTurquoise";
+                    break;
+                case 'grey':
+                    document.body.style.backgroundColor = "grey";
+                    break;
+                case 'gainsboro':
+                    document.body.style.backgroundColor = "gainsboro";
+                    break;
+                
+                case'red':
+                    document.getElementById("esaldiak").style.color = "red";
+                    break;
+                case'blue':
+                    document.getElementById("esaldiak").style.color = "blue";
+                    break;
+                case'green':
+                    document.getElementById("esaldiak").style.color = "green";
+                    break;
+                case'black':
+                    document.getElementById("esaldiak").style.color = "black";
+                    break;
+                case'white':
+                    document.getElementById("esaldiak").style.color = "white";
+                    break;
+
+                case 'arial':
+                    document.getElementById("esaldiak").style.fontSize = "arial"
+                    break;
+                case 'times':
+                    document.getElementById("esaldiak").style.fontSize = "medium"
+                    break;
+                case 'courier new':
+                    document.getElementById("esaldiak").style.fontSize = "courier new"
+                    break;
+                case 'fantasy':
+                    document.getElementById("esaldiak").style.fontFamily = "fantasy"
+                    break;
+                case 'monospace':
+                    document.getElementById("esaldiak").style.fontFamily = "monospace"
+                    break;
+                }
+        }
+    </script>
    
