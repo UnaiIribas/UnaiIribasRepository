@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Proiektua/styles_proiektua/persolnalizer.css">
     <title>Document</title>
     <style>
         body {
@@ -44,7 +43,7 @@
             justify-content: center;
             gap: 30px;
         }
-        #kontainerra{
+        #pertsonalizatu{
             box-sizing: border-box;
             box-shadow: rgba(0,0,0,0.1) 0px 2px 4px;
             border-radius: 10px;
@@ -52,10 +51,10 @@
             width: 80%;
             width: 165px;
         }
-        #kontainerra p{
+        #pertsonalizatu p{
             margin: 0px;
         }
-        </style>
+    </style>
 </head>
 <body>
     <header class="izenburua">
@@ -73,27 +72,34 @@
     <nav>
         <ul>
             <li class="kontainerra">
-                <a href="personalizazioa">Pertsonalizatzailea</a>
                 <div class="pertsonalizatu">
                     <div class="color-options"> Atzeko Kolorea </div>
-                    <button class="color-option" style="background: pink;" onclick="fondoa('pink')"></button> 
-                    <button class="color-option" style="background: PaleTurquoise;" onclick="fondoa('paleTurquoise')"></button>
-                    <button class="color-option" style="background: grey;" onclick="fondoa('grey')"></button>
-                    <button class="color-option" style="background: PaleGreen;" onclick="fondoa('paleGreen')"></button>
-                    <button class="color-option" style="background: gainsboro;" onclick="fondoa('gainsboro')"></button>
+                    <button class="color-option" style="background: pink;" onclick="fondoa1('pink')"></button> 
+                    <button class="color-option" style="background: PaleTurquoise;" onclick="fondoa2('paleTurquoise')"></button>
+                    <button class="color-option" style="background: grey;" onclick="fondoa3('grey')"></button>
+                    <button class="color-option" style="background: PaleGreen;" onclick="fondoa4('paleGreen')"></button>
+                    <button class="color-option" style="background: gainsboro;" onclick="fondoa5('gainsboro')"></button>
                     
                     <div class="color-text"> Aldatu Letrak </div>
-                    <div class="color-option" style="background: red;" onclick="letrakkolorea('black')"></div>
-                    <div class="color-option" style="background: green;" onclick="letrakkolorea('green')"></div>
-                    <div class="color-option" style="background: blue;" onclick="letrakkolorea('blue')"></div>
-                    <div class="color-option" style="background: black;" onclick="letrakkolorea('black')"></div>
-                    <div class="color-option" style="background: white;" onclick="letrakkolorea('white')"></div>
+                    <div class="color-option" style="background: red;" onclick="letrakkolorea1('black')"></div>
+                    <div class="color-option" style="background: green;" onclick="letrakkolorea2('green')"></div>
+                    <div class="color-option" style="background: blue;" onclick="letrakkolorea3('blue')"></div>
+                    <div class="color-option" style="background: black;" onclick="letrakkolorea4('black')"></div>
+                    <div class="color-option" style="background: white;" onclick="letrakkolorea5('white')"></div>
                     
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina1('arial')">XS</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina2('times')">S</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina3('courier new')">A</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina4('fantasy')">C</div>
-                    <div id="letra" class="color-option" style="background: white;" onclick="letraktamaina5('monospace')">T</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraaldaketa1('arial')">A</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraaldaketa2('times')">T</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraaldaketa3('courier new')">C</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraaldaketa4('fantasy')">F</div>
+                    <div id="letra" class="color-option" style="background: white;" onclick="letraaldaketa5('monospace')">M</div>
+
+                    <div class="tamaina">
+                    <div onclick="letraktamaina1('12px')">XS</div>
+                    <div onclick="letraktamaina2('14px')">S</div>
+                    <div onclick="letraktamaina3('20px')">M</div>
+                    <div onclick="letraktamaina4('24px')">L</div>
+                    <div onclick="letraktamaina5('28px')">XL</div>
+                    </div> 
                 </div>
             
             </li>
@@ -103,31 +109,77 @@
     
    
     <script>
-        function fondoa(color) {
-            document.body.style.backgroundColor = color;
-        }    
+          
         function letraktamaina1() {
             document.getElementsByTagName("h1")[0].style.fontSize = "12px";
             document.getElementsByTagName("p")[0].style.fontSize = "12px";
         }
+
         function letraktamaina2() {
             document.getElementsByTagName("h1")[0].style.fontSize = "14px";
             document.getElementsByTagName("p")[0].style.fontSize = "14px";
         }
+
         function letraktamaina3() {
             document.getElementsByTagName("h1")[0].style.fontSize = "20px";
             document.getElementsByTagName("p")[0].style.fontSize = "20x";
         }
+
         function letraktamaina4() {
             document.getElementsByTagName("h1")[0].style.fontSize = "24px";
             document.getElementsByTagName("p")[0].style.fontSize = "24px";
         }
+
         function letraktamaina5() {
             document.getElementsByTagName("h1")[0].style.fontSize = "28px";
             document.getElementsByTagName("p")[0].style.fontSize = "28px";
         }
-        function letrakkolorea() {
-            document.getElementsByClassName("Testuak")
+
+        function fondoa1(){
+            document.body.style.backgroundColor = "pink";
+            document.getElementById("taula").style.backgroundColor = "white";
         }
-    </script>
+
+        function fondoa2(){
+            document.body.style.backgroundColor = "PaleTurquoise";
+            document.getElementById("taula").style.backgroundColor = "white";
+        }
     
+        function fondoa3(){
+            document.body.style.backgroundColor = "grey";
+            document.getElementById("taula").style.backgroundColor = "white";
+        }
+    
+        function fondoa4(){
+            document.body.style.backgroundColor = "#PaleGreen";
+            document.getElementById("taula").style.backgroundColor = "white";
+        }
+    
+        function fondoa5(){
+            document.body.style.backgroundColor = "gainsboro";
+            document.getElementById("taula").style.backgroundColor = "white";
+        }
+
+        function letrakkolorea1(){
+            document.getElementById("Paragrafoa").style.color = "red";
+        }
+    
+        function letrakkolorea2(){
+            document.getElementById("Paragrafoa").style.color = "green";
+        }
+    
+        function letrakkolorea3(){
+            document.getElementById("Paragrafoa").style.color = "blue";
+        }
+    
+        function letrakkolorea4(){
+            document.getElementById("Paragrafoa").style.color = "black";
+        }
+    
+        function letrakkolorea5(){
+        document.getElementById("Paragrafoa").style.color = "white";
+        }
+        
+    </script>
+</body>
+</html>
